@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ReciclaFácil</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
@@ -54,6 +54,7 @@
         </ul>
     </nav>
 
+    <!-- TIPOS DE RESIDUOS !-->
     <div class="residuos_solidos">
         <h2>Resíduos Sólidos Urbanos (RSU): Incluem resíduos domésticos e comerciais, como restos de alimentos, embalagens, papel, plástico, vidro, metal, etc.</h2>
     </div>
@@ -67,7 +68,91 @@
         <h2>Resíduos Perigosos: Incluem substâncias que podem causar danos à saúde humana ou ao meio ambiente, como produtos químicos, baterias, medicamentos vencidos, solventes, tintas, etc.</h2>
     </div>
     <div class="lixo_industrial">
-        <h2>Resíduos Industriais: Gerados por atividades industriais, esses resíduos podem incluir metais, plásticos, bord</h2>
+        <h2>Resíduos Industriais: Gerados por atividades industriais, esses resíduos podem incluir metais, plásticos, borracha, produtos químicos, entre outros.</h2>
     </div>
+    <div class="lixo_construcao_demolicao">
+        <h2>Resíduos de Construção e Demolição (RCD): Resultam de atividades de construção, reforma e demolição, e incluem materiais como concreto, tijolos, madeira, vidro e metais.</h2>
+    </div>
+    <div class="lixo_hospitalar">
+        <h2>Resíduos Hospitalares: Incluem materiais descartados por serviços de saúde, como seringas, agulhas, luvas, gaze, medicamentos vencidos, entre outros.</h2>
+    </div>
+    <div class="lixo_eletronico">
+        <h2>Resíduos Eletrônicos: Compreendem equipamentos eletrônicos descartados, como computadores, celulares, televisores, eletrodomésticos, entre outros.</h2>
+    </div>
+
+    <!-- ONDE DESCARTAR OS RESIDUOS !-->
+    <div class="residuos_solidos_descartar">
+        <h2>Podem ser descartados em lixeiras comuns, de preferência separando resíduos recicláveis dos não recicláveis.</h2>
+    </div>
+    <div class="residuos_organicos_descartar">
+        <h2>Podem ser descartados em composteiras ou em lixeiras específicas para resíduos orgânicos, se disponível. Isso ajuda na compostagem e na redução de resíduos enviados a aterros sanitários.</h2>
+    </div>
+    <div class="residuos_reciclaveis_descartar">
+        <h2>Devem ser separados por tipo (papel, plástico, vidro, metal) e descartados em pontos de coleta seletiva ou centros de reciclagem.</h2>
+    </div>
+    <div class="residuos_perigosos_descartar">
+        <h2>Devem ser levados a pontos de coleta específicos, como ecopontos, para tratamento adequado. Não devem ser misturados com resíduos comuns, pois podem causar contaminação.</h2>
+    </div>
+    <div class="residuos_industriais_descartar">
+        <h2>O descarte deve seguir as regulamentações específicas para cada tipo de resíduo industrial, e geralmente é responsabilidade da empresa geradora garantir o tratamento e descarte adequado.</h2>
+    </div>
+    <div class="residuos_construcao_demolicao_descartar">
+        <h2>Devem ser levados a áreas de triagem específicas ou aterros apropriados. Alguns materiais podem ser reciclados ou reutilizados.</h2>
+    </div>
+    <div class="residuos_hospitalares_descartar">
+        <h2>Devem ser descartados em lixeiras especiais disponíveis em estabelecimentos de saúde. Eles são encaminhados para tratamento específico, como incineração ou esterilização.</h2>
+    </div>
+    <div class="residuos_eletronicos_descartar">
+        <h2>Devem ser levados a pontos de coleta específicos para eletrônicos, muitas vezes disponíveis em lojas de eletrônicos ou programas de reciclagem municipais.</h2>
+    </div>
+
+    <!-- IMPACTOS AMBIENTAIS!-->
+    <div class="impactos_ambientais">
+        <h2>Quais são os impactos ambientais?</h2>
+        <div class="contaminacao_agua">
+            <h3>Contaminação da Água</h3>
+            <p>Resíduos líquidos podem infiltrar no solo e contaminar lençóis freáticos e rios.</p>
+        </div>
+        <div class="contaminacao_solo">
+            <h3>Contaminação do Solo</h3>
+            <p>Produtos químicos e metais pesados podem alterar as propriedades do solo, prejudicando a vegetação e a saúde humana.</p>
+        </div>
+        <div class="poluicao_ar">
+            <h3>Poluição do Ar</h3>
+            <p>A queima de resíduos em lixões a céu aberto libera gases tóxicos, afetando a qualidade do ar.</p>
+        </div>
+    </div>
+
+    <button id="openPopup">Clique para ver a descrição</button>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2>Descrição da Pergunta</h2>
+            <p>Aqui está a descrição detalhada da pergunta.</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('openPopup').addEventListener('click', function() {
+            document.getElementById('popup').style.display = 'flex';
+        });
+
+        document.querySelector('.close').addEventListener('click', function() {
+            document.getElementById('popup').style.display = 'none';
+        });
+
+        window.addEventListener('click', function(event) {
+            if (event.target == document.getElementById('popup')) {
+                document.getElementById('popup').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+
 </body>
 </html>
